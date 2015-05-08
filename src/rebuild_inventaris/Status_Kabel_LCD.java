@@ -8,19 +8,13 @@ public class Status_Kabel_LCD extends Status_Kelas{
 	}
 	
 	boolean Analisis_Kabel_LCD(){
-		
-		System.out.println("Status Kabel LCD");
-		
-		int kabel_LCD = 0;
-		
-		if(kabel_LCD >= 4){
-			System.out.println("Sesuai");
+		if (jumlah > 1){
+			System.out.println("Jumlah kabel LCD sesuai");
 			return true;
-		}
-		
+		}		
 		else {
-			System.out.println("TIdak Sesuai");
-			return false;
+		System.out.println("Jumlah kabel LCD tidak sesuai");
+		return false;
 		}
 		
 	}
