@@ -9,7 +9,6 @@ public class Status_Lampu extends Status_Kelas {
 	}
 	
 	boolean Analisis_Kabel_LCD(){
-		
 		System.out.println("Status Kabel LCD");
 		
 		int kabel_LCD = 0;
