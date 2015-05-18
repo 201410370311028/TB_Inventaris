@@ -3,8 +3,8 @@ package rebuild_inventaris;
 public class Status_Kipas_Angin extends Status_Kelas {
 
 	public Status_Kipas_Angin() {
-			input();
-			view();
+			input("Status Kipas Angin");
+			view("Status Kipas Angin");
 	}
 	boolean Analisis_Kipas_Angin(){
 		if (jumlah >= 2){

@@ -4,8 +4,8 @@ public class Status_Lampu extends Status_Kelas {
 
 	public Status_Lampu() {
 		System.out.println("Status Lampu");
-		input();
-		view();
+		input("Status Lampu");
+		view("Status Lampu");
 	}
 	
 	boolean Analisis_Kabel_LCD(){

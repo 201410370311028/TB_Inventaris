@@ -9,7 +9,7 @@ public class Status_Kelas {
 	String kondisi;
 	String posisi;
 	
-	public void input(){
+	public void input(String masukan){
 		System.out.println("Masukkan Jumlah : ");
 		jumlah = scan.nextInt();
 		System.out.println("Masukkan Kondisi : ");
@@ -18,11 +18,18 @@ public class Status_Kelas {
 		posisi = scan.next();
 	}
 	
-	public void view(){
+	public void view(String pengeluaran){
 		System.out.println("jumlah : "+jumlah);
 		System.out.println("kondisi : "+kondisi);
 		System.out.println("posisi : "+posisi);
    }
+
+	boolean Analisis_Stop_Kontak() {
+		
+		return false;
+	}
+
+	
 
 }
 

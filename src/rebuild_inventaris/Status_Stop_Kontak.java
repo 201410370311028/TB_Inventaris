@@ -4,9 +4,11 @@ public class Status_Stop_Kontak extends Status_Kelas{
 	
 	public Status_Stop_Kontak() {
 		System.out.println("Status Stop Kontak");
-		input();
-		view();
+		input("Status Stop Kontak");
+		view("Status Stop Kontak");
 	}
+	
+	@Override
 	boolean Analisis_Stop_Kontak(){
 		if (jumlah >= 4){
 			System.out.println("Jumlah stop kontak Sesuai");

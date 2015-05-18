@@ -3,8 +3,8 @@ package rebuild_inventaris;
 public class Status_Kabel_LCD extends Status_Kelas{
 
 	public Status_Kabel_LCD() {
-		input();
-		view();
+		input("Status Kabel LCD");
+		view("Status Kabel LCD");
 	}
 	
 	boolean Analisis_Kabel_LCD(){

@@ -4,8 +4,8 @@ public class Status_AC extends Status_Kelas  {
 
 	public Status_AC() {
 		System.out.println("Status AC");
-		input();
-		view();
+		input("Status AC");
+		view("Status AC");
 	}
 	public boolean Analisis_AC(){
 		if (jumlah > 1){
