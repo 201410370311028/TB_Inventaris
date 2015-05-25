@@ -3,10 +3,10 @@ package rebuild_inventaris;
 public class Status_Lampu extends Status_Kelas {
 
 	public Status_Lampu() {
-		input();
-		view();
+		input("Status Lampu");
+		view("Status Lampu");
 	}
-	
+	@Override
 	boolean Analisis_Lampu(){
 		
 		System.out.println("Status Lampu");
@@ -20,7 +20,7 @@ public class Status_Lampu extends Status_Kelas {
 		}
 		
 	}
-	
+	@Override
 	public String Analisisi_Kondisi(){
 		if(kondisi.equals("baik")){
 			System.out.println("Sesuai");
@@ -31,7 +31,7 @@ public class Status_Lampu extends Status_Kelas {
 		}
 		return kondisi;
 	}
-	
+	@Override
 	public String Analisisi_Posisi(){
 		if(posisi.equals("atap ruangan")){
 			System.out.println("Sesuai");
