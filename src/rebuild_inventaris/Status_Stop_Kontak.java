@@ -3,7 +3,6 @@ package rebuild_inventaris;
 public class Status_Stop_Kontak extends Status_Kelas{
 	
 	public Status_Stop_Kontak() {
-		System.out.println("Status Stop Kontak");
 		input("Status Stop Kontak");
 		view("Status Stop Kontak");
 	}
@@ -19,6 +18,7 @@ public class Status_Stop_Kontak extends Status_Kelas{
 			return false;
 		}
 	}
+	@Override
 	String Kondisi_Stop_Kontak(){
 		if (kondisi.equals("baik") && jumlah == 4){
 			System.out.println("kondisi stop kontak Sesuai");
@@ -28,6 +28,8 @@ public class Status_Stop_Kontak extends Status_Kelas{
 		}
 		return kondisi;
 	}
+	
+	@Override
 	String Posisi_Stop_Kontak(){
 		if (posisi.equals("dekat dosen") && jumlah == 4){
 			System.out.println("posisi kipas angin Sesuai");
