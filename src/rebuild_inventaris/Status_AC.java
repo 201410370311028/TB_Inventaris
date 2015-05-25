@@ -7,6 +7,7 @@ public class Status_AC extends Status_Kelas  {
 		input("Status AC");
 		view("Status AC");
 	}
+	@Override
 	public boolean Analisis_AC(){
 		if (jumlah > 1){
 			System.out.println("Jumlah AC sesuai");
@@ -17,6 +18,7 @@ public class Status_AC extends Status_Kelas  {
 		return false;
 		}
 	}
+	@Override
 	public String Kondisi_AC(){
 		if(kondisi.equals("baik")){
 			System.out.println("kondisi sesuai");
@@ -28,6 +30,7 @@ public class Status_AC extends Status_Kelas  {
 		
 		return kondisi;
 	}
+	@Override
 	public String Posisi_AC(){
 		if (posisi.equals("dibelakang")){
 			System.out.println("posisi sesuai");
