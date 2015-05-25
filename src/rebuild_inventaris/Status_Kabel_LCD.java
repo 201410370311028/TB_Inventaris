@@ -6,7 +6,7 @@ public class Status_Kabel_LCD extends Status_Kelas{
 		input("Status Kabel LCD");
 		view("Status Kabel LCD");
 	}
-	
+	@Override
 	boolean Analisis_Kabel_LCD(){
 		if (jumlah > 1){
 			System.out.println("Jumlah kabel LCD sesuai");
@@ -17,6 +17,7 @@ public class Status_Kabel_LCD extends Status_Kelas{
 		return false;
 		}
 	}
+	@Override
 	String Kondisi_Kabel_LCD(){
 		if (kondisi.equals("berfungsi")){
 			System.out.println("kondisi kabel LCD sesuai");
@@ -26,6 +27,7 @@ public class Status_Kabel_LCD extends Status_Kelas{
 		}
 		return kondisi;
 	}
+	@Override
 	String Posisi_Kabel_LCD(){
 		if(posisi.equals("dekat dosen")){
 			System.out.println("posisi kabel LCD sesuai");
