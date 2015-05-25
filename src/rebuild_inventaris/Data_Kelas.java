@@ -1,29 +1,33 @@
 package rebuild_inventaris;
 
+import java.util.Scanner;
+
 public class Data_Kelas {
 	
-	private int Ruang_Kelas;
-	private String Lokasi_Kelas;
-	private String Pengguna_Kelas;
+	Scanner scan = new Scanner(System.in);
 	
+	int ruang_kelas;
+	String lokasi_kelas;
+	String pengguna;
 	
-	public int getRuang_Kelas() {
-		return Ruang_Kelas;
+		public void Data_Pengguna(){
+		
+		System.out.println("Ruang : ");
+		ruang_kelas = scan.nextInt();
+		
+		System.out.println("Lokasi Ruang (GKB 1/GKB 2/GKB 3 : ");
+		lokasi_kelas = scan.next();
+		
+		System.out.println("Fakultas : ");
+		pengguna = scan.next();
+		
 	}
-	public void setRuang_Kelas(int ruang_Kelas) {
-		Ruang_Kelas = ruang_Kelas;
-	}
-	public String getLokasi_Kelas() {
-		return Lokasi_Kelas;
-	}
-	public void setLokasi_Kelas(String lokasi_Kelas) {
-		Lokasi_Kelas = lokasi_Kelas;
-	}
-	public String getPengguna_Kelas() {
-		return Pengguna_Kelas;
-	}
-	public void setPengguna_Kelas(String pengguna_Kelas) {
-		Pengguna_Kelas = pengguna_Kelas;
+	
+	public void Result_Data_Pengguna(){
+		System.out.println("Ruang : "+ ruang_kelas);
+		System.out.println("Ruang : "+ lokasi_kelas);
+		System.out.println("Ruang : "+ pengguna);
+		
 	}
 	
 }
