@@ -89,7 +89,4 @@ public class Kontrol_Kelas extends Data_Kelas{
 		
 		}
 	
-	
-	
-	
 }
