@@ -1,33 +1,95 @@
 package rebuild_inventaris;
 
-import java.util.Scanner;
 
-public class Kontrol_Kelas {
+public class Kontrol_Kelas extends Data_Kelas{
 
-	Data_Kelas user_data = new Data_Kelas();
-	Status_Kelas user_status = new Status_Kelas();
-	
-	Scanner scan;
-	
-	public void Data_Pengguna(){
-		
-		System.out.println("Ruang : ");
-		user_data.setRuang_Kelas(scan.nextInt());
-		
-		System.out.println("Lokasi Ruang (GKB 1/GKB 2/GKB 3 : ");
-		user_data.setLokasi_Kelas(scan.next());
-		
-		System.out.println("Fakultas : ");
-		user_data.setPengguna_Kelas(scan.next());
-		
+	public Kontrol_Kelas(){
+		Data_Pengguna();
+		Result_Data_Pengguna();
 	}
 	
-	public void Result_Data_Pengguna(){
-		System.out.println("Ruang : "+user_data.getRuang_Kelas());
-		System.out.println("Ruang : "+user_data.getLokasi_Kelas());
-		System.out.println("Ruang : "+user_data.getPengguna_Kelas());
+	boolean Analisis_Data_Pengguna(){
+
 		
-	}
+				
+		if(lokasi_kelas.equals("GKB 1")){
+			System.out.println("Sesuai");
+			return true;
+		}
+		
+		if(lokasi_kelas.equals("GKB 2")){
+			System.out.println("Sesuai");
+			return true;
+		}
+		
+		if(lokasi_kelas.equals("GKB 3")){
+			System.out.println("Sesuai");
+			return true;
+		}
+		
+		
+		if(pengguna.equals("Fakultas Teknik")){
+			System.out.println("Sesuai");
+			return true;
+		}
+		
+		if(pengguna.equals("Fakultas Kedokteran")){
+			System.out.println("Sesuai");
+			return true;
+		}
+		
+		if(pengguna.equals("Fakultas Ekonomi dan Bisnis")){
+			System.out.println("Sesuai");
+			return true;
+		}
+		
+		if(pengguna.equals("Fakultas Keguruan dan Ilmu Pendidikan")){
+			System.out.println("Sesuai");
+			return true;
+		}
+		
+		if(pengguna.equals("Fakultas Agama Islam")){
+			System.out.println("Sesuai");
+			return true;
+
+		}
+		
+		if(pengguna.equals("Fakultas Psikologi")){
+			System.out.println("Sesuai");
+			return true;
+
+		}
+		
+		if(pengguna.equals("Fakultas Hukum")){
+			System.out.println("Sesuai");
+		}
+		
+		if(pengguna.equals("Fakultas Pertanian dan Peternakan")){
+			System.out.println("Sesuai");
+			return true;
+		
+		}
+		
+		if(pengguna.equals("Fakultas Kesehatan")){
+			System.out.println("Sesuai");
+			return true;
+			
+		}
+		
+		if(pengguna.equals("Fakultas Ilmu Sosial dan Politik")){
+			System.out.println("Sesuai");
+			return true;
+			
+		}
+		
+		else{
+			System.out.println("Keywoard Anda Salah");
+			return false;
+		}
+		
+		}
+	
+	
 	
 	
 }
