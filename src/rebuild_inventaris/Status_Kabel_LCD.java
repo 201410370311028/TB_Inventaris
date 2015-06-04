@@ -1,40 +1,60 @@
 package rebuild_inventaris;
 
-public class Status_Kabel_LCD extends Status_Kelas{
+import java.io.FileWriter;
 
-	public Status_Kabel_LCD() {
-		input("Status Kabel LCD");
-		view("Status Kabel LCD");
+public class Status_Kabel_LCD extends Status_Kelas{
+	
+	public Status_Kabel_LCD(){
+	System.out.println("\nStatus Kabel LCD");
+	insert();
+	view();
 	}
-	@Override
-	boolean Analisis_Kabel_LCD(){
-		if (jumlah > 1){
+	
+
+	public int Analisis_Jumlah(){
+		if (Jumlah >= 1){
 			System.out.println("Jumlah kabel LCD sesuai");
-			return true;
-		}		
+		}
+		
 		else {
 		System.out.println("Jumlah kabel LCD tidak sesuai");
-		return false;
 		}
+		return Jumlah; 
+	
 	}
-	@Override
+	
 	String Kondisi_Kabel_LCD(){
-		if (kondisi.equals("berfungsi")){
+		if (Kondisi.equals("berfungsi")){
 			System.out.println("kondisi kabel LCD sesuai");
 		}
 		else{
 			System.out.println("kondisi kabel LCD tidak sesuai");
 		}
-		return kondisi;
+		return Kondisi;
 	}
-	@Override
+
 	String Posisi_Kabel_LCD(){
-		if(posisi.equals("dekat dosen")){
+		if(Posisi.equals("dekatdosen")){
 			System.out.println("posisi kabel LCD sesuai");
 		}
 		else{
 			System.out.println("posisi kabel LCD tidak sesuai");
 		}
-		return posisi;
+		return Posisi;
 	}
+	
+	@Override
+	public void save(){
+		try{
+			FileWriter write = new FileWriter("Hasil.txt");
+			write.write("Result Kabel LCD");
+			write.write(" | Jumlah :" + Jumlah);
+			write.write(" | Kondisi :" + Kondisi);
+			write.write(" | Posisi: " + Posisi);
+			write.close();
+		}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 }
