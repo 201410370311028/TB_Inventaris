@@ -1,26 +1,29 @@
 package rebuild_inventaris;
 
-public class Status_AC extends Status_Kelas  {
+import java.io.FileWriter;
+
+public class Status_AC extends Status_Kelas {
 
 	public Status_AC() {
 		System.out.println("Status AC");
-		input("Status AC");
-		view("Status AC");
+		insert();
+		view();
 	}
-	@Override
-	public boolean Analisis_AC(){
-		if (jumlah > 1){
+	
+	public int Analisis_AC(){
+		if (Jumlah > 1){
 			System.out.println("Jumlah AC sesuai");
-			return true;
+			
 		}		
 		else {
 		System.out.println("Jumlah AC Tidak sesuai");
-		return false;
+		
 		}
+		return Jumlah;
 	}
-	@Override
+	
 	public String Kondisi_AC(){
-		if(kondisi.equals("baik")){
+		if(Kondisi.equals("baik")){
 			System.out.println("kondisi sesuai");
 		}
 		
@@ -28,16 +31,31 @@ public class Status_AC extends Status_Kelas  {
 		System.out.println("kondisi tidak sesuai");
 	}
 		
-		return kondisi;
+		return Kondisi;
 	}
-	@Override
+	
 	public String Posisi_AC(){
-		if (posisi.equals("dibelakang")){
+		if (Posisi.equals("dibelakang")){
 			System.out.println("posisi sesuai");
 		}
 		else{
 			System.out.println("posisi tidak sesuai");
 		}
-		return posisi;
+		return Posisi;
 	}
-}
+	@Override
+	public void save(){
+		try{
+			FileWriter write = new FileWriter("result_AC.txt");
+			write.write("Result Stop Kontak ");
+			write.write(" | Jumlah :" + Jumlah);
+			write.write(" | Kondisi :" + Kondisi);
+			write.write(" | Posisi: " + Posisi);
+			write.close();
+		}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+	}
+
